@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Other Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      padding: 40px 5%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2563eb;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.85);
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Creative</h1>
+  <div class="gallery-grid" id="gallery">
+    <!-- All 33 images -->
+    <img src="images/design/1 (1).jpeg" alt="Image 1">
+    <img src="images/design/1 (1).jpg" alt="Image 2">
+    <img src="images/design/1 (1).png" alt="Image 3">
+    <img src="images/design/1 (2).png" alt="Image 4">
+    <img src="images/design/Copy of the sun also rises 2 .jpg" alt="Image 4">
+    <img src="images/design/hempushpa invitation .jpg" alt="Image 4">
+    <img src="images/design/Copy of The sun also rises book cover.jpg" alt="Image 4">
+    <img src="images/design/jaipur.jpg" alt="Image 4">
+    <img src="images/design/Jordan poster.jpg" alt="Image 4">
+    <img src="images/design/post brown.png" alt="Image 4">
+    <img src="images/design/poster of coffee.jpg" alt="Image 4">
+    <img src="images/design/scorpio.jpg" alt="Image 4">
+    <img src="images/design/shoes poster.jpg" alt="Image 4">
+    <img src="images/design/skin.png" alt="Image 4">
+    <img src="images/design/SUPRA.jpg" alt="Image 4">
+    <img src="images/design/swift.jpg" alt="Image 4">
+
+    
+   
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="" id="lightbox-img" alt="Enlarged Image">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll("#gallery img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = index;
+      lightboxImg.src = images[currentIndex].src;
+      lightbox.classList.add("show");
+    }
+
+    images.forEach((img, i) => {
+      img.addEventListener("click", () => showImage(i));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("show")) return;
+
+      if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+      } else if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+      } else if (e.key === "Escape") {
+        lightbox.classList.remove("show");
+      }
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("show");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet | Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #eef2ff, #f0fdf4);
+      color: #1e293b;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #2563eb;
+      letter-spacing: 1px;
+    }
+
+    .navbar nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .navbar nav ul li a {
+      font-weight: 500;
+      color: #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .navbar nav ul li a:hover,
+    .navbar nav ul li .active {
+      color: #2563eb;
+      background: #e0e7ff;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+
+    .projects {
+      padding: 140px 10% 80px;
+      background: linear-gradient(to top right, #fdfdfd, #f1f5f9);
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 42px;
+      color: #2563eb;
+      margin-bottom: 50px;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      transition: all 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card h3 {
+      font-size: 22px;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: #64748b;
+      margin-bottom: 15px;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      margin: 12px 0;
+    }
+
+    .project-card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #2563eb, #3b82f6);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background: white;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">Meet</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+
+      <!-- Example Cards -->
+     <div class="project-card">
+  <h3>The Laundry Walas</h3>
+  <p>Instagram-based brand showcasing laundry services and promotions.</p>
+  <div style=" padding: 12px; border-radius: 12px;">
+    <img src="images/logo1-light.png" alt="The Laundry Walas" style="background-color: #0e3a67;">
+  </div>
+  <a href="https://www.instagram.com/thelaundrywalas/" target="_blank">View Instagram</a>
+</div>
+
+
+      <div class="project-card">
+        <h3>Therapy & Thrive</h3>
+        <p>Mental health awareness content and logo design.</p>
+        <img src="images/logo1.jpg" alt="Therapy & Thrive">
+        <a href="https://www.instagram.com/therapyandthrive_withmeraki/" target="_blank">View Instagram</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Creative Graphics</h3>
+        <p>Creative works from @creative_graphics.s</p>
+        <img src="images/logo2.jpg" alt="Creative Graphics">
+        <a href="https://www.instagram.com/creative_graphics.s/" target="_blank">View Instagram</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Nettsplore</h3>
+        <p>Mutual Fund and investment management visuals.</p>
+        <img src="images/WhatsApp Image 2025-07-18 at 11.53.47_d593bf86.jpg" alt="Nettsplore">
+      </div>
+
+      <div class="project-card">
+        <h3>Zoomax Oil Lubricants</h3>
+        <p>Automotive lubricant brand visuals, reels, and ads.</p>
+        <img src="images/zoomax.jpg" alt="Zoomax">
+        <a href="https://www.instagram.com/zoomax_lubricants/" target="_blank">View Instagram</a>
+      </div>
+
+      <!-- ✅ Packbyte Project -->
+      <div class="project-card">
+        <h3>Packbyte Internship</h3>
+        <img src="images/plo.png" alt="Zoomax">
+        <p>Here are 20 of the sample design works I created during my internship at Packbyte.</p>
+
+        <a href="gallery.html" target="_blank">View Images</a>
+      </div>
+      <!-- other creative-->
+      <div class="project-card">
+        <h3>Other Creative</h3>
+        <p>Here are some of the design works I created.</p>
+
+        <a href="design.html" target="_blank">View Images</a>
+      </div>
+
+    </div>
+  </section>
+</body>
+
+</html>

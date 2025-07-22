@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet | Skills</title>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==================== Global Styles ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f1f5ff, #f5f7fa);
+      color: #1f2937;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    /* ==================== Navbar ==================== */
+    .navbar {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #3b82f6;
+      letter-spacing: 1px;
+    }
+
+    .navbar nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .navbar nav ul li a {
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #1f2937;
+    }
+
+    .navbar nav ul li a:hover,
+    .navbar nav ul li .active {
+      background-color: #e0e7ff;
+      color: #3b82f6;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    }
+
+    /* ==================== Skills Section ==================== */
+    .skills {
+      padding: 140px 10% 60px;
+      min-height: 100vh;
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .skills h2 {
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #3b82f6;
+      text-shadow: 1px 1px 4px rgba(59, 130, 246, 0.1);
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      padding: 25px 15px;
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+      transform: translateY(0);
+      cursor: pointer;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
+    }
+
+    .skill-card i {
+      font-size: 42px;
+      color: #f59e0b;
+      margin-bottom: 12px;
+    }
+
+    .skill-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    /* ==================== Responsive ==================== */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .navbar nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    /* ==================== Animations ==================== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Meet</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card"><i class='bx bxs-image'></i>
+        <h3>Photoshop</h3>
+      </div>
+      <div class="skill-card"><i class='bx bxs-paint'></i>
+        <h3>Illustrator</h3>
+      </div>
+      <div class="skill-card"><i class='bx bxs-pencil'></i>
+        <h3>Logo Design</h3>
+      </div>
+      <div class="skill-card"><i class='bx bx-brush'></i>
+        <h3>Creative Design</h3>
+      </div>
+      <div class="skill-card"><i class='bx bx-slideshow'></i>
+        <h3>Canva</h3>
+      </div>
+      <div class="skill-card"><i class='bx bx-layer'></i>
+        <h3>Branding</h3>
+      </div>
+      <div class="skill-card"><i class='bx bx-file'></i>
+        <h3>Print Design</h3>
+      </div>
+      <div class="skill-card"><i class='bx bxs-photo-album'></i>
+        <h3>Social Media Posts</h3>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
