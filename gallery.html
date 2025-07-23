@@ -19,7 +19,7 @@
       text-align: center;
       color: #2563eb;
       margin-bottom: 40px;
-      font-size: 36px;
+      font-size: 32px;
     }
 
     .gallery-grid {
@@ -61,6 +61,21 @@
 
     .lightbox.show {
       display: flex;
+    }
+
+    /* Large screen spacing */
+    @media screen and (min-width: 1400px) {
+      body {
+        padding: 60px 12%;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .gallery-grid {
+        gap: 30px;
+      }
     }
   </style>
 </head>
